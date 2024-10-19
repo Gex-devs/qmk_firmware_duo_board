@@ -13,14 +13,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-// void matrix_init_user(void) {
-//     // Set the pin as an input
-//     pinMode(B15, INPUT_PULLUP);
-// }
+void matrix_init_user(void) {
+    setPinInputHigh(B15);
+}
 
-// void matrix_scan_user(void) {
-//     // Check if the pin is LOW (key pressed)
-//     if (readPin(B15) == 0) {
-//         // Key is pressed, handle it
-//     }
-// }
+void matrix_scan_user(void) {
+    // Check if the pin is LOW (key pressed)
+    if (readPin(B15)) {
+        tap_code(KC_MUTE);
+    }
+}

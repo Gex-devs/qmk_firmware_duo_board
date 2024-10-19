@@ -1,4 +1,15 @@
-#include_next <mcuconf.h>
-   
+#pragma once
+
+#include_next <halconf.h>
+
+#undef HAL_USE_SERIAL
+#define HAL_USE_SERIAL TRUE
+
+#undef STM32_SERIAL_USE_USART1
+#define STM32_SERIAL_USE_USART1 TRUE
+
 #undef STM32_ADC_USE_ADC1
 #define STM32_ADC_USE_ADC1 TRUE
+
+#undef STM32_USB_USE_USB1
+#define STM32_USB_USE_USB1 TRUE
