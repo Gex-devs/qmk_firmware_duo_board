@@ -1,5 +1,7 @@
 #define MASTER_LEFT
 
+#include_next <config.h>
+
 #define ANALOG_JOYSTICK_X_AXIS_PIN B0
 #define ANALOG_JOYSTICK_Y_AXIS_PIN B1
 
